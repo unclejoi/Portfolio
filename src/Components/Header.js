@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, BrowserRouter as Router } from 'react-router-dom'
+import React from 'react';
+import {BrowserRouter as Router } from 'react-router-dom'
 import { Link } from 'react-scroll';
 
 
 
 export const Header = (props) => {
 
-    const [ show, setShow ] = React.useState(true);
 
     const openPage = () => {
         document.getElementById("page").style.width = "100%"
@@ -16,11 +15,6 @@ export const Header = (props) => {
     return (
         <>
             <Router>
-
-                {/* <div className="header"> */}
-                {/* <img src={panda} className="logo"/> */}
-                {/* <a href="https://web.facebook.com/joiholgado/" className="link" target="_blank">Joi Emmanuel U. Holgado</a>
-            </div> */}
                 <div className="menu">
                     <div id="topnav" className={'topnav display'}>
                         <Link  spy={true} smooth={true} duration={500} offset={-200} to="home" class="active" id="home">
