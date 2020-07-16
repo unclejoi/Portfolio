@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter as Router } from 'react-router-dom'
 import { Link } from 'react-scroll';
 
@@ -7,8 +7,9 @@ import { Link } from 'react-scroll';
 export const Header = (props) => {
 
 
-    const openPage = () => {
-        document.getElementById("page").style.width = "100%"
+    const openPage = (pageName) => {
+        console.log(pageName)
+        document.getElementById(`page${pageName}`).style.width = "100%"
     }
 
 
@@ -17,7 +18,7 @@ export const Header = (props) => {
             <Router>
                 <div className="menu">
                     <div id="topnav" className={'topnav display'}>
-                        <Link  spy={true} smooth={true} duration={500} offset={-200} to="home" class="active" id="home">
+                        <Link  spy={true} smooth={true} duration={500} offset={-200} to="home" className="active" id="home" >
                             <span style={{ marginRight: "20px" }}>
                                 Home
                             </span>
@@ -25,7 +26,7 @@ export const Header = (props) => {
                                 <i className="fas fa-home"></i>
                             </span>
                         </Link>
-                        <Link  spy={true} smooth={true} duration={500} offset={-200} to="home" class="active" id="skills">
+                        <Link  spy={true} smooth={true} duration={500} offset={-200} to="home" className="active" id="skills"  onClick={() => openPage(1)}>
                             <span style={{ marginRight: "20px" }}>
                                 Skills
                             </span>
@@ -33,7 +34,7 @@ export const Header = (props) => {
                                 <i className="fas fa-tasks"></i>
                             </span>
                         </Link>
-                        <Link spy={true} smooth={true} duration={500} offset={0} to="skills" id="project"   onClick={openPage}>
+                        <Link spy={true} smooth={true} duration={500} offset={0} to="skills" id="project"   onClick={() => openPage(2)}>
                             <span style={{ marginRight: "20px" }}>
                                 Projects
                             </span>
@@ -41,7 +42,7 @@ export const Header = (props) => {
                                 <i className="fas fa-folder"></i>
                             </span>
                         </Link>
-                        <Link spy={true} smooth={true} duration={500} offset={0} to="skills" id="contact">
+                        <Link spy={true} smooth={true} duration={500} offset={0} to="skills" id="contact" onClick={() => openPage(3)}>
                             <span style={{ marginRight: "20px" }}>
                                 Contact
                             </span>
