@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Container, Grid } from '@material-ui/core';
-import star from '../assets/img/star8.png';
+import { Grid } from '@material-ui/core';
 
 export const Main = () => {
 
@@ -9,7 +8,7 @@ export const Main = () => {
 
     }, [])
     const closePage = (pageName) => {
-        let x = document.getElementById(`page${pageName}`).style.width = "0";
+        document.getElementById(`page${pageName}`).style.width = "0";
     }
 
 
