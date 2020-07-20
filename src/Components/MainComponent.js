@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Container } from '@material-ui/core';
-console.log('x')
+import { Container, Grid } from '@material-ui/core';
+import star from '../assets/img/star8.png';
 
 export const Main = () => {
 
@@ -12,22 +12,30 @@ export const Main = () => {
         let x = document.getElementById(`page${pageName}`).style.width = "0";
     }
 
+
     return (
         <>
-
-            <div className="homepage">
-                <Container>
-                    <div className="jumbotron">
-                        <span className="name">
-                            {/* Hi, */}
-                    </span>
-                        <br />
-                        <span className="name" style={{fontSize: '200px'}}>
-                            Joi
-                    </span>
-                    </div>
-                </Container>
+        <div >
+            <div id="animation-area">
+                <div id="stars"></div>
+                {/* <div id="stars2"></div> */}
             </div>
+        </div>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <Grid container>
+            <Grid xs={12}>
+                <div id="title">
+                    <div id="name">JOI</div>
+                </div>
+            </Grid>
+            <Grid xs={12} style={{textAlign: 'center'}}>
+                <div id="position">Front-end Developer</div>
+            </Grid>
+        </Grid>
+
+       
+
             <div className="sidepage" id="page1">
                 <span className="closebtn" onClick={() => closePage(1)}>&times;</span>
                 <div>
@@ -48,6 +56,7 @@ export const Main = () => {
                     Hello this is Contact Page
                     </div>
             </div>
+
             {/* <ul className="box-area">
                 <div className="square"></div>
                 <div className="square"></div>

@@ -2,29 +2,29 @@
     'https://fonts.googleapis.com/css?family=Poppins: 400,500,600,700,800,900&display=swap'
 );
 
+body{
+    box-sizing: border-box;
+    margin: 0;
+    /* overflow: hidden; */
+    /* background: repeating-radial-gradient(ellipse at bottom, #1b2735 0%, #000 100%); */
+    background-color: black;
+    text-align: center;
+}
+
 
  .homepage{
      width: 100%;
      height: 100vh;
-     /* background: repeating-conic-gradient(  
-        rgba(174, 241, 151, 0.46),
-        rgba(174, 241, 151, 0.46),
-         #05386b51,
-         #05386b51,
-         rgba(174, 241, 151, 0.46),
-         rgba(174, 241, 151, 0.46),
-         #05386b51,
-         #05386b51,
-         rgba(174, 241, 151, 0.46),
-         rgba(174, 241, 151, 0.46),
-         #05386b51,
-         #05386b51,
-         rgba(174, 241, 151, 0.46),
-         rgba(174, 241, 151, 0.46)
-    ) fixed; */
      text-align: left;
      color: white;
      font-family: 'Righteous', cursive;
+     z-index: 20;
+     background: radial-gradient(
+         ellipse at bottom ,
+         rgba(255, 255, 255, 0.2),
+         rgba(255,255,255, 0.1),
+         rgba(255,255,255, 0.1));
+
  }
 
 
@@ -43,7 +43,7 @@
     background-color: #5CDB95;
     font-family: 'Oswald', sans-serif;
     /* font-size: 10px; */
-    box-shadow: 2px 2px 2px #05386B;
+    /* box-shadow: 2px 2px 2px #05386B; */
     /* text-align: right; */
   }
 
@@ -80,7 +80,6 @@
     font-size: 80px;
     /* font-family: 'Oxygen', sans-serif; */
     font-family: "Dank Mono", ui-monospace, monospace;
-    animation: animateName 2s ;
     z-index: 2000;
     text-shadow:2px 2px 2px #05386B;
 }
@@ -180,15 +179,58 @@
     display: block;
 }
 
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+
+.star{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    animation: animatestar 10s ease-in-out infinite,
+               animateBG 10s linear infinite;
+}
+
+.star .star1{
+    background: url('../img/star8.png');
+}
+
+@keyframes animatestar{
+    0%, 20%, 40%, 60%, 80%, 100%{
+        opacity: 0;
+    } 
+    10%, 30%, 50%, 70%, 90%{
+        opacity: 1;
+    }
+}
+@keyframes animateBG{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 /* //Responsive */
 
 @media only screen and (max-width: 600px) {
     .footer-container{
         text-align: center;
         z-index: 21;
-        border-radius: 40px;
-        bottom: 10px;
+        width: 100%;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
         /* display: none; */
     }
     .soc-med{
