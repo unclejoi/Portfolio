@@ -569,5 +569,12 @@
         color: transparent;
         -webkit-text-stroke: 2px #fff;
     }   
+
+    #animation-area{
+        display: none;
+    }
+    #title{
+        position: relative;
+    }
     
 }

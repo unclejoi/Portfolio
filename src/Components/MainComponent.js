@@ -14,26 +14,29 @@ export const Main = () => {
 
     return (
         <>
-        <div >
-            <div id="animation-area">
-                <div id="stars"></div>
-                {/* <div id="stars2"></div> */}
-            </div>
-        </div>
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <Grid container>
-            <Grid xs={12}>
-                <div id="title">
-                    <div id="name">JOI</div>
+            <div >
+                <div id="animation-area">
+                    <div id="stars"></div>
+                    {/* <div id="stars2"></div> */}
                 </div>
+            </div>
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <Grid container>
+                <Grid xs={12} style={{ textAlign: 'center' }}>
+                    <div id="title">
+                        <div id="name">JOI</div>
+                    </div>
+                </Grid>
             </Grid>
-            <Grid xs={12} style={{textAlign: 'center'}}>
-                <div id="position">Front-end Developer</div>
-            </Grid>
-        </Grid>
 
-       
+            <Grid container>
+                <Grid xs={12} style={{ textAlign: 'center' }}>
+                    <div id="position">Front-end Developer</div>
+                </Grid>
+            </Grid>
+
+
 
             <div className="sidepage" id="page1">
                 <span className="closebtn" onClick={() => closePage(1)}>&times;</span>
