@@ -108,24 +108,24 @@ export const Main = () => {
                         </Grid>
                     </Grid>
                 </Element>
-{/* 
+
                 <Element name="projects" style={{ marginTop: '200px' }} className="mobile">
                     <Grid container>
                         <Grid item xs={12}>
-                            Projects
+                            {/* Projects */}
                         </Grid>
                     </Grid>
                 </Element>
 
-                <Element name="contact" style={{ marginTop: '200px' }} className="mobile">
+                {/* <Element name="contact" style={{ marginTop: '200px' }} className="mobile">
                     <Grid container>
                         <Grid item xs={12}>
                             Contacts
                         </Grid>
                     </Grid>
-                </Element>
+                </Element> */}
 
- */}
+
 
             </div>
 
