@@ -10,6 +10,7 @@ export const Header = (props) => {
     const openPage = (pageName) => {
         console.log(pageName)
         document.getElementById(`page${pageName}`).style.width = "100%"
+        document.getElementById(`page${pageName}`).style.opacity = "1";
     }
 
 
@@ -26,7 +27,7 @@ export const Header = (props) => {
                                 <i className="fas fa-home"></i>
                             </span>
                         </Link>
-                        <Link  spy={true} smooth={true} duration={500} offset={-200} to="home" className="active" id="skills"  onClick={() => openPage(1)}>
+                        <Link  spy={true} smooth={true} duration={500} offset={-200} to="skills" className="active" id="skills" onClick={() => openPage(1)} >
                             <span style={{ marginRight: "20px" }}>
                                 Skills
                             </span>

@@ -1,22 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Grid, Button } from '@material-ui/core';
+import { Link } from 'react-scroll';
 
 
 export const Footer = () => {
     const date = new Date();
     const year = date.getFullYear();
-    const [isOpen, setToggle] = useState(false)
-    
-    const openPage = (pageName) => {
-        console.log(pageName)
-        setToggle(!isOpen)
-        if(isOpen){
-            document.getElementById(`page${pageName}`).style.width = "0"
-        }else{
-            document.getElementById(`page${pageName}`).style.width = "100%"
-        }
 
-    }
+
+
     return (
         <>
             <div className="footer-container">
@@ -36,23 +28,45 @@ export const Footer = () => {
                 <div className="bottom-nav">
                     <Container fluid="true">
                         <Grid container>
-                            <Grid item xs={4}>
-                                <Button 
-                                onClick={() => openPage(1)}>
-                                    <i className="fas fa-tasks"></i>
-                                </Button>
+                            <Grid item xs={2}>
+                                <Link spy={true} smooth={true} duration={500} offset={-200} to="home" className="active" id="home" >
+                                    <Button>
+                                        <i className="fas fa-home"></i>
+                                    </Button>
+                                </Link>
                             </Grid>
-                            <Grid item xs={4}>
-                                <Button
-                                onClick={() => openPage(2)}>
-                                    <i className="fas fa-folder"></i>
-                                </Button>
+
+                            <Grid item xs={8}>
+                                <Grid container>
+                                    <Grid item xs={4}>
+                                        <Link spy={true} smooth={true} duration={500} offset={-20} to="about" className="active" id="about" >
+                                            <Button>
+                                                <i className="fas fa-user"></i>
+                                            </Button>
+                                        </Link>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <Link spy={true} smooth={true} duration={500} offset={-20} to="skills" className="active" id="skills" >
+                                            <Button>
+                                                <i className="fas fa-tasks"></i>
+                                            </Button>
+                                        </Link>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <Link spy={true} smooth={true} duration={500} offset={-20} to="projects" className="active" id="projects" >
+                                            <Button>
+                                                <i className="fas fa-folder"></i>
+                                            </Button>
+                                        </Link>
+                                    </Grid>
+                                </Grid>
                             </Grid>
-                            <Grid item xs={4}
-                            onClick={() => openPage(3)}>
-                                <Button>
-                                    <i className="fas fa-address-card"></i>
-                                </Button>
+                            <Grid item xs={2}>
+                                <Link spy={true} smooth={true} duration={500} offset={-20} to="contact" className="active" id="contact" >
+                                    <Button>
+                                        <i className="fas fa-address-card"></i>
+                                    </Button>
+                                </Link>
                             </Grid>
                         </Grid>
                     </Container>
